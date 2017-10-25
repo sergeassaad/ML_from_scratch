@@ -10,14 +10,14 @@ x_0 = [-1.2, -1.2];
 
 %% Gradient Descent
 B = @(x) eye(length(x));
-[x_opt_GD, f_opt_GD, N_steps_GD,Q1_GD, Q2_GD] = LineSearch(f,grad,B,x_0);
+[x_opt_GD, f_opt_GD, N_steps_GD,Q1_GD, Q2_GD] = unconstrained_minimizer(f,grad,B,x_0);
 
 %% Newton's Method
 %Compute Hessian
 B = @(x)[-400.*(x(2)-3*x(1).^2)+2, -400.*x(1);...
          -400.*x(1), 200];
      
-[x_opt_NM, f_opt_NM, N_steps_NM,Q1_NM, Q2_NM] = LineSearch(f,grad,B,x_0);
+[x_opt_NM, f_opt_NM, N_steps_NM,Q1_NM, Q2_NM] = unconstrained_minimizer(f,grad,B,x_0);
 
 %% Plot convergence metrics
 figure(1); clf
