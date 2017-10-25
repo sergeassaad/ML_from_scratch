@@ -1,4 +1,4 @@
-function [x_opt, f_opt, N_steps, Q1, Q2] = LineSearch(f,grad,B,x_0)
+function [x_opt, f_opt, N_steps, Q1, Q2] = unconstrained_minimizer(f,grad,B,x_0)
 
 % Author: Serge Assaad
 % Date: Oct. 24, 2017
