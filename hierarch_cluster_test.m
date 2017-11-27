@@ -13,7 +13,7 @@ title('unlabeled data');
 
 %% Hierarchical clustering
 K = 3;
-data_labels = hierarch_cluster_from_scratch2(data,K);
+data_labels = hierarch_cluster_from_scratch(data,K);
 cluster_nums = unique(data_labels);
 
 %% Plot after clustering
