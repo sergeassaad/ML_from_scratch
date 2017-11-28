@@ -5,7 +5,7 @@ B = 1*rand(10,2)+3;
 C = 1.5*rand(10,2)+1.5;
 data = [A;B;C];
 
-%% Plot before kmeans
+%% Plot before clustering
 
 figure(1); clf
 plot(data(:,1),data(:,2),'ko');
